@@ -17,6 +17,11 @@
                 <!-- Logo Image -->
                 <img src="logo/logo58-removebg-preview.png" alt="58AM Marketing Street Logo">
             </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>
@@ -24,6 +29,7 @@
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#clients">Clients</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li class="mobile-only"><a href="tel:+910000000000" class="btn btn-primary">Call Us</a></li>
                 </ul>
             </nav>
             <div class="cta">
@@ -31,6 +37,9 @@
             </div>
         </div>
     </header>
+
+    <!-- Mobile Menu Script -->
+    <script src="js/script.js"></script>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -49,7 +58,8 @@
 
         <div class="container hero-content">
             <div class="hero-text">
-                <h1>Accelerate Your Growth with <span>58AM Marketing Street</span></h1>
+                <h1>Accelerate Your Growth with <span class="brand-style">58<span class="brand-highlight">A</span>M
+                        Marketing Street</span></h1>
                 <p>Premier Telemarketing, Lead Generation, and Telesales Solutions. We bridge the gap between your
                     business
                     and your future clients with precision and speed.</p>
@@ -132,6 +142,18 @@
                     <h3>Data Cleansing</h3>
                     <p>Update and verify your databases to ensure maximum efficiency in your campaigns.</p>
                 </div>
+                <!-- Service 7 -->
+                <div class="service-card">
+                    <div class="service-icon">🗣️</div>
+                    <h3>B2C Telemarketing</h3>
+                    <p>Direct outreach to consumers to boost your B2C sales and market presence.</p>
+                </div>
+                <!-- Service 8 -->
+                <div class="service-card">
+                    <div class="service-icon">📧</div>
+                    <h3>Email Marketing</h3>
+                    <p>Integrated email campaigns to nurture leads alongside calls.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -141,12 +163,18 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <!-- Placeholder for Office Image -->
-                    <img src="https://placehold.co/600x400/f0f0f0/1a1a1a?text=58AM+Team+At+Work" alt="Office Team"
-                        style="border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                    <!-- About Us Slideshow (Pan & Fade) -->
+                    <div class="about-slideshow">
+                        <div class="about-slide"
+                            style="background-image: url('company_images/IMG-20260212-WA0071.jpg');"></div>
+                        <div class="about-slide"
+                            style="background-image: url('company_images/IMG-20260212-WA0075.jpg');"></div>
+                        <div class="about-slide"
+                            style="background-image: url('company_images/IMG-20260212-WA0078.jpg');"></div>
+                    </div>
                 </div>
                 <div class="about-text">
-                    <h2>About 58AM Marketing Street</h2>
+                    <h2>About 58<span class="brand-highlight">A</span>M Marketing Street</h2>
                     <p>We are a professional, dynamic, and skillful telemarketing company specializing in B2B and B2C
                         domains. Just like the industry leaders, we focus purely on your business's success.</p>
                     <p>Our team performs intense research to understand your market scenario and acts with a clear
@@ -186,7 +214,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>58AM Marketing Street</h4>
+                    <h4>58<span class="brand-highlight">A</span>M Marketing Street
+                    </h4>
                     <p>Driving growth through conversation. Your trusted partner for outbound and inbound marketing
                         solutions.</p>
                 </div>
@@ -211,7 +240,7 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul style="font-size: 0.9rem; color: #aaa;">
-                        <li>58AM Marketing Street Pvt Ltd</li>
+                        <li>58<span class="brand-highlight">A</span>M Marketing Street Pvt Ltd</li>
                         <li>123 Business Park, Sector 5</li>
                         <li>India</li>
                         <li><br><span style="color:var(--brand-primary)">📞 +91 000 000 0000</span></li>
@@ -219,7 +248,8 @@
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2026 58AM Marketing Street Private Limited. All Rights Reserved.
+                &copy; 2026 58<span class="brand-highlight">A</span>M Marketing Street Private Limited. All Rights
+                Reserved.
             </div>
         </div>
     </footer>
