@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs | 58AM Marketing Street</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Page Specific Styles */
+      .page-header {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/charanjeet-dhiman-mHusyBu4bxM-unsplash.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 150px 0 80px;
+        text-align: center;
+        color: white;
+      }
+      .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+        margin: 50px 0;
+      }
+      .blog-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border: 1px solid #f0f0f0;
+      }
+      .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,255,1,0.1);
+      }
+      .blog-image {
+        height: 220px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        position: relative;
+        overflow: hidden;
+      }
+      .blog-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .blog-meta {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        background: rgba(255,255,255,0.95);
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+      .blog-content {
+        padding: 30px;
+      }
+      .blog-category {
+        background: rgba(0, 255, 1, 0.1);
+        color: #00aa00;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .blog-content h3 {
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+        line-height: 1.4;
+      }
+      .blog-content p {
+        color: #666;
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+      .read-more {
+        color: var(--brand-primary);
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        transition: gap 0.3s ease;
+      }
+      .read-more:hover {
+        gap: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container nav-wrapper">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo/logo58-removebg-preview.png" alt="58AM Marketing Street Logo" />
+            </a>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#clients">Clients</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="blogs.html" class="active">Blogs</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li class="mobile-only">
+              <a href="tel:+919831699097" class="btn btn-primary">Call Us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="cta">
+          <a href="tel:+919831699097" class="btn btn-primary">Call Us</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Industry Insights</h1>
+            <p>Expert perspectives on telemarketing, lead generation, and BPO best practices.</p>
+        </div>
+    </section>
+
+    <!-- Blog List -->
+    <section class="container">
+        <div class="blog-grid">
+            <!-- Blog Post 1 -->
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://placehold.co/600x400/4A90E2/fff?text=Lead+Gen+2026" alt="Lead Generation Trends">
+                    <div class="blog-meta">📅 Feb 15, 2026</div>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category">Lead Generation</span>
+                    <h3>Top 5 Lead Generation Trends Dominating 2026</h3>
+                    <p>Discover how AI-powered personalization, conversational marketing, and intent data are reshaping the B2B lead generation landscape this year.</p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://placehold.co/600x400/8E44AD/fff?text=GDPR+Compliance" alt="GDPR Compliance">
+                    <div class="blog-meta">📅 Feb 10, 2026</div>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category">Compliance</span>
+                    <h3>Navigating GDPR: A Complete Guide for UK Businesses</h3>
+                    <p>Everything you need to know about data protection regulations when outsourcing your telemarketing operations to ensure full compliance.</p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Blog Post 3 -->
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://placehold.co/600x400/E67E22/fff?text=Cold+Calling" alt="Cold Calling Guide">
+                    <div class="blog-meta">📅 Feb 5, 2026</div>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category">Strategy</span>
+                    <h3>Is Cold Calling Dead? The Truth About Outbound in 2026</h3>
+                    <p>Spoiler: It's alive and thriving. Learn why strategic cold calling still delivers the highest ROI for B2B companies when done right.</p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Blog Post 4 -->
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://placehold.co/600x400/27AE60/fff?text=Appointment+Setting" alt="Appointment Setting">
+                    <div class="blog-meta">📅 Jan 28, 2026</div>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category">Best Practices</span>
+                    <h3>7 Scripts That Book More Qualified Appointments</h3>
+                    <p>Proven conversation frameworks used by our top-performing agents to fill your calendar with decision-makers, not tire-kickers.</p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Blog Post 5 -->
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://placehold.co/600x400/E74C3C/fff?text=BPO+Selection" alt="BPO Selection">
+                    <div class="blog-meta">📅 Jan 20, 2026</div>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category">Industry</span>
+                    <h3>How to Choose the Right BPO Partner in India</h3>
+                    <p>A comprehensive checklist covering certifications, infrastructure, cultural fit, and hidden costs to avoid when selecting your outsourcing partner.</p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Blog Post 6 -->
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://placehold.co/600x400/3498DB/fff?text=Inbound+Support" alt="Inbound Support">
+                    <div class="blog-meta">📅 Jan 12, 2026</div>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category">Customer Success</span>
+                    <h3>Inbound vs Outbound: Building a Hybrid Strategy</h3>
+                    <p>Why the most successful companies are combining proactive outreach with reactive customer support to maximize lifetime value.</p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 80px 0; text-align: center; color: white;">
+        <div class="container">
+            <h2 style="margin-bottom: 20px; color: white;">Stay Ahead of the Curve</h2>
+            <p style="margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9;">Subscribe to our monthly newsletter for exclusive BPO insights, industry trends, and proven sales techniques.</p>
+            <div style="max-width: 500px; margin: 0 auto; display: flex; gap: 10px;">
+                <input type="email" placeholder="Enter your email" style="flex: 1; padding: 15px 20px; border-radius: 50px; border: none; font-size: 1rem;">
+                <button class="btn btn-primary" style="white-space: nowrap;">Subscribe Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>58<span class="brand-highlight">A</span>M Marketing Street</h4>
+            <p>
+              Driving growth through conversation. Your trusted partner for
+              outbound and inbound marketing solutions.
+            </p>
+            <div class="footer-socials">
+              <a href="#" target="_blank" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.5 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+              </a>
+              <a href="#" target="_blank" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#about">About Us</a></li>
+              <li><a href="case-studies.html">Case Studies</a></li>
+              <li><a href="blogs.html">Blogs</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="index.html#services">Lead Generation</a></li>
+              <li><a href="index.html#services">Appointment Setting</a></li>
+              <li><a href="index.html#services">Market Research</a></li>
+              <li><a href="index.html#services">Data Services</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul style="font-size: 0.9rem; color: #aaa">
+              <li>
+                58<span class="brand-highlight">A</span>M Marketing Street Pvt Ltd
+              </li>
+              <li>21, Andul Rd, Haskhali Pole, Shibpur</li>
+              <li>Howrah, West Bengal 71110</li>
+              <li>
+                <br /><span style="color: var(--brand-primary)">📞 098316 99097</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          &copy; 2026 58<span class="brand-highlight">A</span>M Marketing Street Private Limited. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Mobile Menu Script -->
+    <script src="js/script.js"></script>
+    
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919831699097" class="whatsapp-float" target="_blank">
+      <img src="social_icons/whatsapplogo.jpg" alt="WhatsApp" />
+    </a>
+  </body>
+</html>

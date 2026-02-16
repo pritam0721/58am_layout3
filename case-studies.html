@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Studies | 58AM Marketing Street</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Page Specific Styles */
+      .page-header {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/berkeley-communications-WEDDt-u3q3o-unsplash.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 150px 0 80px;
+        text-align: center;
+        color: white;
+      }
+      .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+      .case-study-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin: 50px 0;
+      }
+      .case-study-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+      }
+      .case-study-card:hover {
+        transform: translateY(-10px);
+      }
+      .cs-image {
+        height: 200px;
+        background-color: #ddd;
+        position: relative;
+      }
+      .cs-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .cs-content {
+        padding: 25px;
+      }
+      .cs-tag {
+        background: rgba(0, 255, 1, 0.1);
+        color: #00aa00;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 15px;
+      }
+      .cs-content h3 {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+      }
+      .cs-stats {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+      }
+      .cs-stat-item div {
+        font-weight: 700;
+        color: var(--brand-primary);
+        font-size: 1.2rem;
+      }
+      .cs-stat-item span {
+        font-size: 0.85rem;
+        color: #666;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container nav-wrapper">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo/logo58-removebg-preview.png" alt="58AM Marketing Street Logo" />
+            </a>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#clients">Clients</a></li>
+            <li><a href="case-studies.html" class="active">Case Studies</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li class="mobile-only">
+              <a href="tel:+919831699097" class="btn btn-primary">Call Us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="cta">
+          <a href="tel:+919831699097" class="btn btn-primary">Call Us</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Success Stories</h1>
+            <p>Proven results from our partnerships with global industry leaders.</p>
+        </div>
+    </section>
+
+    <!-- Case Studies List -->
+    <section class="container">
+        <div class="case-study-grid">
+            <!-- Case Study 1 -->
+            <div class="case-study-card">
+                <div class="cs-image">
+                    <img src="https://placehold.co/600x400/333/fff?text=SaaS+Growth" alt="SaaS Case Study">
+                </div>
+                <div class="cs-content">
+                    <span class="cs-tag">B2B Lead Gen</span>
+                    <h3>Scaling Sales for a UK Fintech Startup</h3>
+                    <p>How we helped a London-based Fintech company triple their qualified leads in just 3 months through targeted LinkedIn outreach.</p>
+                    <div class="cs-stats">
+                        <div class="cs-stat-item">
+                            <div>300%</div>
+                            <span>Lead Increase</span>
+                        </div>
+                        <div class="cs-stat-item">
+                            <div>£2M+</div>
+                            <span>Pipeline Value</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="case-study-card">
+                <div class="cs-image">
+                    <img src="https://placehold.co/600x400/333/fff?text=Telecom+Success" alt="Telecom Case Study">
+                </div>
+                <div class="cs-content">
+                    <span class="cs-tag">Inbound Support</span>
+                    <h3>Reducing Churn for a Major Telecom Provider</h3>
+                    <p>Implementing 24/7 support and proactive retention strategies to slash customer churn rates for a leading Indian telecom giant.</p>
+                    <div class="cs-stats">
+                        <div class="cs-stat-item">
+                            <div>45%</div>
+                            <span>Churn Reduction</span>
+                        </div>
+                        <div class="cs-stat-item">
+                            <div>98%</div>
+                            <span>CSAT Score</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 3 -->
+            <div class="case-study-card">
+                <div class="cs-image">
+                    <img src="https://placehold.co/600x400/333/fff?text=E-commerce" alt="Ecommerce Case Study">
+                </div>
+                <div class="cs-content">
+                    <span class="cs-tag">Market Research</span>
+                    <h3>Strategic Entry for an E-commerce Brand</h3>
+                    <p>Conducting in-depth market feasibility studies to guide a US fashion brand's successful expansion into the Southeast Asian market.</p>
+                    <div class="cs-stats">
+                        <div class="cs-stat-item">
+                            <div>15k+</div>
+                            <span>Data Points</span>
+                        </div>
+                        <div class="cs-stat-item">
+                            <div>2 Months</div>
+                            <span>To Launch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section style="background-color: #f9f9f9; padding: 80px 0; text-align: center;">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">Ready to Write Your Success Story?</h2>
+            <p style="margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Join 100+ satisfied clients who have transformed their business with 58AM Marketing Street.</p>
+            <a href="index.html#contact" class="btn btn-primary">Get Your Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>58<span class="brand-highlight">A</span>M Marketing Street</h4>
+            <p>
+              Driving growth through conversation. Your trusted partner for
+              outbound and inbound marketing solutions.
+            </p>
+            <div class="footer-socials">
+              <a href="#" target="_blank" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.5 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+              </a>
+              <a href="#" target="_blank" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#about">About Us</a></li>
+              <li><a href="case-studies.html">Case Studies</a></li>
+              <li><a href="blogs.html">Blogs</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="index.html#services">Lead Generation</a></li>
+              <li><a href="index.html#services">Appointment Setting</a></li>
+              <li><a href="index.html#services">Market Research</a></li>
+              <li><a href="index.html#services">Data Services</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul style="font-size: 0.9rem; color: #aaa">
+              <li>
+                58<span class="brand-highlight">A</span>M Marketing Street Pvt Ltd
+              </li>
+              <li>21, Andul Rd, Haskhali Pole, Shibpur</li>
+              <li>Howrah, West Bengal 71110</li>
+              <li>
+                <br /><span style="color: var(--brand-primary)">📞 098316 99097</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          &copy; 2026 58<span class="brand-highlight">A</span>M Marketing Street Private Limited. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Mobile Menu Script -->
+    <script src="js/script.js"></script>
+    
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919831699097" class="whatsapp-float" target="_blank">
+      <img src="social_icons/whatsapplogo.jpg" alt="WhatsApp" />
+    </a>
+  </body>
+</html>
