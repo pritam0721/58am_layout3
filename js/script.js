@@ -24,4 +24,26 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+
+    // Cost Calculator Logic
+    const agentSlider = document.getElementById('agentSlider');
+    const agentCountDisplay = document.getElementById('agentCount');
+    const monthlySavingsDisplay = document.getElementById('monthlySavings');
+
+    if (agentSlider && agentCountDisplay && monthlySavingsDisplay) {
+        const savingsPerAgent = 1300; // Estimated monthly savings per agent (GBP)
+
+        function updateCalculator() {
+            const count = agentSlider.value;
+            const totalSavings = count * savingsPerAgent;
+            
+            agentCountDisplay.textContent = count;
+            monthlySavingsDisplay.textContent = `£${totalSavings.toLocaleString()}`;
+        }
+
+        agentSlider.addEventListener('input', updateCalculator);
+        // Initialize
+        updateCalculator();
+    }
 });
