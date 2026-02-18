@@ -1,0 +1,105 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Top 5 Lead Generation Trends Dominating 2026",
+      "category": "Lead Generation",
+      "date": "Feb 15, 2026",
+      "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80",
+      "content": "Discover how AI-powered personalization, conversational marketing, and intent data are reshaping the B2B lead generation landscape this year."
+    },
+    {
+      "id": 2,
+      "title": "Navigating GDPR: A Complete Guide for UK Businesses",
+      "category": "Compliance",
+      "date": "Feb 10, 2026",
+      "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80",
+      "content": "Everything you need to know about data protection regulations when outsourcing your telemarketing operations to ensure full compliance."
+    },
+    {
+      "id": 3,
+      "title": "Is Cold Calling Dead? The Truth About Outbound in 2026",
+      "category": "Strategy",
+      "date": "Feb 5, 2026",
+      "image": "https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?auto=format&fit=crop&w=600&q=80",
+      "content": "Spoiler: It's alive and thriving. Learn why strategic cold calling still delivers the highest ROI for B2B companies when done right."
+    },
+    {
+      "id": 4,
+      "title": "7 Scripts That Book More Qualified Appointments",
+      "category": "Best Practices",
+      "date": "Jan 28, 2026",
+      "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=80",
+      "content": "Proven conversation frameworks used by our top-performing agents to fill your calendar with decision-makers, not tire-kickers."
+    },
+    {
+      "id": 5,
+      "title": "How to Choose the Right BPO Partner in India",
+      "category": "Industry",
+      "date": "Jan 20, 2026",
+      "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80",
+      "content": "A comprehensive checklist covering certifications, infrastructure, cultural fit, and hidden costs to avoid when selecting your outsourcing partner."
+    },
+    {
+      "id": 6,
+      "title": "Inbound vs Outbound: Building a Hybrid Strategy",
+      "category": "Customer Success",
+      "date": "Jan 12, 2026",
+      "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80",
+      "content": "Why the most successful companies are combining proactive outreach with reactive customer support to maximize lifetime value."
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": 1,
+      "title": "Scaling Sales for a UK Fintech Startup",
+      "tag": "B2B Lead Gen",
+      "image": "https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?auto=format&fit=crop&w=600&q=80",
+      "description": "How we helped a London-based Fintech company triple their qualified leads in just 3 months through targeted LinkedIn outreach.",
+      "stats": [
+        {
+          "value": "300%",
+          "label": "Lead Increase"
+        },
+        {
+          "value": "£2M+",
+          "label": "Pipeline Value"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Reducing Churn for a Major Telecom Provider",
+      "tag": "Inbound Support",
+      "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=80",
+      "description": "Implementing 24/7 support and proactive retention strategies to slash customer churn rates for a leading Indian telecom giant.",
+      "stats": [
+        {
+          "value": "45%",
+          "label": "Churn Reduction"
+        },
+        {
+          "value": "98%",
+          "label": "CSAT Score"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strategic Entry for an E-commerce Brand",
+      "tag": "Market Research",
+      "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80",
+      "description": "Conducting in-depth market feasibility studies to guide a US fashion brand's successful expansion into the Southeast Asian market.",
+      "stats": [
+        {
+          "value": "15k+",
+          "label": "Data Points"
+        },
+        {
+          "value": "2 Months",
+          "label": "To Launch"
+        }
+      ]
+    }
+  ]
+}

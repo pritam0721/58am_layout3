@@ -52,92 +52,55 @@
 
     <!-- Blog List -->
     <section class="container">
-        <div class="blog-grid">
-            <!-- Blog Post 1 -->
-            <div class="blog-card">
-                <div class="blog-image">
-                    <img src="https://placehold.co/600x400/4A90E2/fff?text=Lead+Gen+2026" alt="Lead Generation Trends">
-                    <div class="blog-meta">📅 Feb 15, 2026</div>
-                </div>
-                <div class="blog-content">
-                    <span class="blog-category">Lead Generation</span>
-                    <h3>Top 5 Lead Generation Trends Dominating 2026</h3>
-                    <p>Discover how AI-powered personalization, conversational marketing, and intent data are reshaping the B2B lead generation landscape this year.</p>
-                    <a href="#" class="read-more">Read Article →</a>
-                </div>
-            </div>
-
-            <!-- Blog Post 2 -->
-            <div class="blog-card">
-                <div class="blog-image">
-                    <img src="https://placehold.co/600x400/8E44AD/fff?text=GDPR+Compliance" alt="GDPR Compliance">
-                    <div class="blog-meta">📅 Feb 10, 2026</div>
-                </div>
-                <div class="blog-content">
-                    <span class="blog-category">Compliance</span>
-                    <h3>Navigating GDPR: A Complete Guide for UK Businesses</h3>
-                    <p>Everything you need to know about data protection regulations when outsourcing your telemarketing operations to ensure full compliance.</p>
-                    <a href="#" class="read-more">Read Article →</a>
-                </div>
-            </div>
-
-            <!-- Blog Post 3 -->
-            <div class="blog-card">
-                <div class="blog-image">
-                    <img src="https://placehold.co/600x400/E67E22/fff?text=Cold+Calling" alt="Cold Calling Guide">
-                    <div class="blog-meta">📅 Feb 5, 2026</div>
-                </div>
-                <div class="blog-content">
-                    <span class="blog-category">Strategy</span>
-                    <h3>Is Cold Calling Dead? The Truth About Outbound in 2026</h3>
-                    <p>Spoiler: It's alive and thriving. Learn why strategic cold calling still delivers the highest ROI for B2B companies when done right.</p>
-                    <a href="#" class="read-more">Read Article →</a>
-                </div>
-            </div>
-
-            <!-- Blog Post 4 -->
-            <div class="blog-card">
-                <div class="blog-image">
-                    <img src="https://placehold.co/600x400/27AE60/fff?text=Appointment+Setting" alt="Appointment Setting">
-                    <div class="blog-meta">📅 Jan 28, 2026</div>
-                </div>
-                <div class="blog-content">
-                    <span class="blog-category">Best Practices</span>
-                    <h3>7 Scripts That Book More Qualified Appointments</h3>
-                    <p>Proven conversation frameworks used by our top-performing agents to fill your calendar with decision-makers, not tire-kickers.</p>
-                    <a href="#" class="read-more">Read Article →</a>
-                </div>
-            </div>
-
-            <!-- Blog Post 5 -->
-            <div class="blog-card">
-                <div class="blog-image">
-                    <img src="https://placehold.co/600x400/E74C3C/fff?text=BPO+Selection" alt="BPO Selection">
-                    <div class="blog-meta">📅 Jan 20, 2026</div>
-                </div>
-                <div class="blog-content">
-                    <span class="blog-category">Industry</span>
-                    <h3>How to Choose the Right BPO Partner in India</h3>
-                    <p>A comprehensive checklist covering certifications, infrastructure, cultural fit, and hidden costs to avoid when selecting your outsourcing partner.</p>
-                    <a href="#" class="read-more">Read Article →</a>
-                </div>
-            </div>
-
-            <!-- Blog Post 6 -->
-            <div class="blog-card">
-                <div class="blog-image">
-                    <img src="https://placehold.co/600x400/3498DB/fff?text=Inbound+Support" alt="Inbound Support">
-                    <div class="blog-meta">📅 Jan 12, 2026</div>
-                </div>
-                <div class="blog-content">
-                    <span class="blog-category">Customer Success</span>
-                    <h3>Inbound vs Outbound: Building a Hybrid Strategy</h3>
-                    <p>Why the most successful companies are combining proactive outreach with reactive customer support to maximize lifetime value.</p>
-                    <a href="#" class="read-more">Read Article →</a>
-                </div>
+        <div class="blog-grid" id="blog-grid-container">
+            <!-- Blogs will be loaded here dynamically -->
+            <div style="text-align: center; width: 100%; grid-column: 1/-1; padding: 40px;">
+                <p>Loading latest insights...</p>
             </div>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchBlogs();
+        });
+
+        async function fetchBlogs() {
+            try {
+                const response = await fetch('http://localhost:3000/api/blogs');
+                const blogs = await response.json();
+                const container = document.getElementById('blog-grid-container');
+                
+                if (blogs.length === 0) {
+                    container.innerHTML = '<p style="text-align:center; width:100%;">No blogs found.</p>';
+                    return;
+                }
+
+                container.innerHTML = blogs.map(blog => `
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="${blog.image}" alt="${blog.title}" onerror="this.src='https://placehold.co/600x400?text=No+Image'">
+                            <div class="blog-meta">📅 ${blog.date}</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">${blog.category}</span>
+                            <h3>${blog.title}</h3>
+                            <p>${blog.content}</p>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+                `).join('');
+                
+            } catch (error) {
+                console.error('Error fetching blogs:', error);
+                document.getElementById('blog-grid-container').innerHTML = 
+                    `<div style="text-align: center; width: 100%; grid-column: 1/-1; color: red;">
+                        <p>Failed to load blogs. Please ensure the server is running.</p>
+                        <p style="font-size: 0.8em; color: gray;">(Run 'node server/server.js')</p>
+                    </div>`;
+            }
+        }
+    </script>
 
     <!-- Newsletter CTA -->
     <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 80px 0; text-align: center; color: white;">

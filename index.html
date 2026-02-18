@@ -545,49 +545,75 @@
           <p>Stay updated with the latest trends and success stories from 58AM.</p>
         </div>
 
-        <div class="blog-grid" style="margin-top: 0;">
-          <!-- Featured Case Study -->
-          <div class="blog-card">
-            <div class="blog-image">
-              <img src="https://placehold.co/600x400/333/fff?text=SaaS+Growth" alt="SaaS Case Study">
-              <div class="blog-meta">Case Study</div>
-            </div>
-            <div class="blog-content">
-              <span class="blog-category">B2B Lead Gen</span>
-              <h3>Scaling Sales for a UK Fintech Startup</h3>
-              <p>How we helped a London-based Fintech company triple their qualified leads in just 3 months.</p>
-              <a href="case-studies.html" class="read-more">Read Case Study →</a>
-            </div>
-          </div>
-
-          <!-- Featured Blog Post 1 -->
-          <div class="blog-card">
-            <div class="blog-image">
-              <img src="https://placehold.co/600x400/4A90E2/fff?text=Lead+Gen+2026" alt="Lead Generation Trends">
-              <div class="blog-meta">Blog</div>
-            </div>
-            <div class="blog-content">
-              <span class="blog-category">Lead Generation</span>
-              <h3>Top 5 Lead Generation Trends Dominating 2026</h3>
-              <p>Discover how AI-powered personalization and intent data are reshaping B2B lead gen.</p>
-              <a href="blogs.html" class="read-more">Read Article →</a>
-            </div>
-          </div>
-
-          <!-- Featured Blog Post 2 -->
-          <div class="blog-card">
-            <div class="blog-image">
-              <img src="https://placehold.co/600x400/8E44AD/fff?text=GDPR+Compliance" alt="GDPR Compliance">
-              <div class="blog-meta">Blog</div>
-            </div>
-            <div class="blog-content">
-              <span class="blog-category">Compliance</span>
-              <h3>Navigating GDPR: A Complete Guide for UK Businesses</h3>
-              <p>Everything you need to know about data protection when outsourcing.</p>
-              <a href="blogs.html" class="read-more">Read Article →</a>
-            </div>
+        <div class="blog-grid" style="margin-top: 0;" id="insights-grid-container">
+          <!-- Dynamic Content Loading -->
+          <div style="text-align: center; width: 100%; grid-column: 1/-1; padding: 40px;">
+              <p>Loading latest insights...</p>
           </div>
         </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', async () => {
+                const container = document.getElementById('insights-grid-container');
+                
+                try {
+                    const [blogsRes, casesRes] = await Promise.all([
+                        fetch('http://localhost:3000/api/blogs'),
+                        fetch('http://localhost:3000/api/case-studies')
+                    ]);
+
+                    const blogs = await blogsRes.json();
+                    const caseStudies = await casesRes.json();
+                    
+                    let htmlContent = '';
+
+                    // 1. Featured Case Study (Take the first one)
+                    if (caseStudies.length > 0) {
+                        const cs = caseStudies[0];
+                        htmlContent += `
+                        <div class="blog-card">
+                            <div class="blog-image">
+                            <img src="${cs.image}" alt="${cs.title}" onerror="this.src='https://placehold.co/600x400?text=No+Image'">
+                            <div class="blog-meta">Case Study</div>
+                            </div>
+                            <div class="blog-content">
+                            <span class="blog-category">${cs.tag}</span>
+                            <h3>${cs.title}</h3>
+                            <p>${cs.description}</p>
+                            <a href="case-studies.html" class="read-more">Read Case Study →</a>
+                            </div>
+                        </div>`;
+                    }
+
+                    // 2. Featured Blogs (Take the first two)
+                    const recentBlogs = blogs.slice(0, 2);
+                    recentBlogs.forEach(blog => {
+                        htmlContent += `
+                        <div class="blog-card">
+                            <div class="blog-image">
+                            <img src="${blog.image}" alt="${blog.title}" onerror="this.src='https://placehold.co/600x400?text=No+Image'">
+                            <div class="blog-meta">Blog</div>
+                            </div>
+                            <div class="blog-content">
+                            <span class="blog-category">${blog.category}</span>
+                            <h3>${blog.title}</h3>
+                            <p>${blog.content}</p>
+                            <a href="blogs.html" class="read-more">Read Article →</a>
+                            </div>
+                        </div>`;
+                    });
+
+                    container.innerHTML = htmlContent || '<p style="text-align:center;">No insights available.</p>';
+
+                } catch (error) {
+                    console.error('Error loading insights:', error);
+                    container.innerHTML = 
+                        `<div style="text-align: center; width: 100%; grid-column: 1/-1;">
+                            <p>Unable to load latest insights.</p>
+                        </div>`;
+                }
+            });
+        </script>
 
         <div style="text-align: center; margin-top: 50px;">
           <a href="blogs.html" class="btn btn-primary">View All Insights</a>
